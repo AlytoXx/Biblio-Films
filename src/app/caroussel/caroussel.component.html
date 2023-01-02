@@ -1,0 +1,6 @@
+<ng-template ngFor let-slide [ngForOf]="slides" let-i="index">
+  <button (click)="prevSlide()">Précédent</button>
+  <div [class.active]="i === activeSlide"></div>
+
+  <button (click)="nextSlide()">Suivant</button>
+</ng-template>

@@ -1,0 +1,54 @@
+section {
+ height:  440px;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  color: white;
+  margin-top: 0;
+}
+
+.text{
+    width: 50%;
+}
+.container-min-card{
+  display: flex;
+}
+// h2{color: white}
+.card {
+ 
+margin: 8px 5px 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  // overflow: hidden;
+}
+h2{ color: #FF0000;}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #FF0000;
+  }
+  50% {
+    box-shadow: 0 0 20px #FF0000;
+  }
+  100% {
+    box-shadow: 0 0 10px #FF0000;
+  }
+}
+
+.glow {
+  animation: glow 1s infinite;
+}
+div {
+  /* Configurez l'animation */
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card-image:hover {
+  transition: transform 0.5s 1s;
+  transform: scale(1.1);
+  z-index: 1;
+
+  /* Ajoutez une ombre rouge */
+  box-shadow: 0 0 10px red;
+}

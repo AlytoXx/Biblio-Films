@@ -1,0 +1,36 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+nav {
+    top: 0;
+    position: sticky;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width:100% ;
+   background-color: #040404;
+}
+.sous-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.left {
+    justify-content: left   ;
+}
+.right {
+   
+  justify-content: right;
+}
+img{
+    max-width: 50px;
+}
+a{
+    margin: 0 10px 0;
+}
+input{
+  color: white;
+  width: 150px;
+}
