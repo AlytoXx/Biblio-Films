@@ -9,6 +9,7 @@ import { FilmComponent } from './film/film.component';
 import { MalisteComponent } from './maliste/maliste.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CarousselComponent } from './caroussel/caroussel.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CarousselComponent } from './caroussel/caroussel.component';
     CarousselComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -29,6 +31,12 @@ import { CarousselComponent } from './caroussel/caroussel.component';
       registrationStrategy: 'registerWhenStable:30000',
     }),
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

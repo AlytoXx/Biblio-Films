@@ -20,4 +20,26 @@
     </div>
   </nav>
 </header>
-<input type="text" placeholder="" /><button>Search</button>
+
+<form>
+  <label>Genre:</label>
+  <select name="genre">
+    <option value="horror">Horreur</option>
+    <option value="comedy">Comédie</option>
+    <option value="animation">Animation</option>
+  </select>
+</form>
+
+<!-- <div *ngFor="let movie of movies">
+          <div *ngIf="selectedGenre === 'horror' && movie.genre === 'horror'">
+            {{ movie.title }}
+          </div>
+          <div *ngIf="selectedGenre === 'comedy' && movie.genre === 'comedy'">
+            {{ movie.title }}
+          </div>
+          <div
+            *ngIf="selectedGenre === 'animation' && movie.genre === 'animation'"
+          >
+            {{ movie.title }}
+          </div>
+        </div> -->

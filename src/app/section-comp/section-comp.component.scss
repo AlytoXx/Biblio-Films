@@ -7,6 +7,30 @@ section {
   color: white;
   margin-top: 0;
 }
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: blue;
+  border: 2px solid black;
+  animation: vibrate 0.3s ease-in-out infinite;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+h5{
+  height:  250px;
+  overflow: hidden
+}
 
 .text{
     width: 50%;
@@ -23,7 +47,9 @@ margin: 8px 5px 5px;
   // overflow: hidden;
 }
 h2{ color: #FF0000;}
-
+.C{
+  color: greenyellow;
+}
 @keyframes glow {
   0% {
     box-shadow: 0 0 10px #FF0000;
@@ -35,10 +61,25 @@ h2{ color: #FF0000;}
     box-shadow: 0 0 10px #FF0000;
   }
 }
+@keyframes glows {
+  0% {
+    box-shadow: 0 0 10px greenyellow;
+  }
+  50% {
+    box-shadow: 0 0 20px greenyellow;
+  }
+  100% {
+    box-shadow: 0 0 10px greenyellow;
+  }
+}
 
 .glow {
   animation: glow 1s infinite;
 }
+.glows {
+  animation: glows 1s infinite;
+}
+
 div {
   /* Configurez l'animation */
   transition: transform 0.5s, box-shadow 0.5s;
